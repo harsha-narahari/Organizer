@@ -1,13 +1,17 @@
 <div class="row">    
-    <div class="col-lg-6 col-md-6">
+    <div class="col-lg-10 col-md-10">
         <form>
+            <div class="form-group">
+              <label for="fileName">File Name</label>&nbsp;&nbsp;
+              <input type="text" class="form-control" id="fileName" placeholder="Enter a short File Name">
+            </div>
             <div class="form-group">
               <label for="inputFile">File</label>&nbsp;&nbsp;
               <input type="file" id="inputFile" multiple="multiple">
             </div>
             <div class="form-group">
               <label for="tags">Tags</label>
-              <input type="text" class="form-control" id="tags" placeholder="Comma separated tags">
+              <input type="text" class="form-control" id="tags" placeholder="Comma separated tags like - Birthday, Anniversary">
             </div>
             <button type="submit" class="btn btn-primary">Upload</button>
           </form>

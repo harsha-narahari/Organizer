@@ -1,10 +1,13 @@
-<div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Dropdown button
-    </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <span class="dropdown-item" *ngFor="let themeUrl of themeUrls" href="themeUrl.url" (change)="setTheme(themeUrl.url)">{{themeUrl.theme}}</span>
-    </div>
-  </div>  
+<select class="form-control" (change)="setTheme($event.target.value)">
+      <option class="dropdown-item" *ngFor="let theme of themes" value="{{theme.url}}">{{theme.name}}</option>    
+</select>  
+<pre>
+  selectedTheme 
+  {{selectedThemeName}}
   {{selectedThemeUrl}}
-  <!-- <link href="{{selectedThemeUrl}}" rel="stylesheet" integrity="sha384-2Z7/vC4qa8c+Ie2wHTTl23UC/WUQvArGcavaBvCBwEfbQFA/NiQ7jp30yzfsa5+p" crossorigin="anonymous"> -->
+</pre>
+<div *ngIf="selectedThemeName=='darkly'; then ifcondition">
+  <template #ifcondition>
+      <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0-beta.2/darkly/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  </template>
+</div>

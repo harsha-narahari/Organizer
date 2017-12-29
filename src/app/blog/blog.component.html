@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col-lg-1 col-md-1 col-sm-1"><a class="btn btn-primary" routerLink="/blogs">Back</a></div>
+    <div class="col-lg-1 col-md-1 col-sm-1"><a class="btn btn-primary" routerLink="/blog-edit/{{blog.title}}">Edit</a></div>    
+</div>
+<section>
+    <h3>{{blog.title}}</h3>
+</section>
+<section>
+  Created on {{blog.createdDateTime}}
+</section>
+<section>
+  Modified on {{blog.modifiedDateTime}}
+</section>
+<section> 
+      {{blog.content}}  
+</section>
+
